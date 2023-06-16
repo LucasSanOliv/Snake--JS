@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Game | Javascript</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Monomaniac+One&display=swap" rel="stylesheet">
+    
+</head>
+    <body>
+
+        <main class="mainSection">
+
+            <div>
+                <p>
+                <span> <img src="assets/snake-img.svg" alt=""> </span>
+                
+                Super Snake JS
+
+                <span> <img src="assets/snake-img-r.svg" alt=""></span>
+            </p>
+            </div>
+            
+
+            <section class="arenaSection">
+
+                <canvas class="arena" id="arena">
+
+                </canvas>
+
+                <header class="header">
+                    <p class="currentScoreText">
+                        Pontuação Atual <span id="currentScoreValue">0</span>
+                    </p>
+        
+                    <p class="maximumScoreText">
+                        Pontuação Máxima <span id="maximumScoreValue">0</span>
+                    </p>
+                </header>
+
+                
+            </section>
+
+        </main>
+
+        <section class="overlay" id="overlayModal">
+
+            <section class="boxDialogoInicio" id="boxDialogoInicio">
+
+                <h1 class="tituloJogo">
+                    Super Snake JS
+                </h1>
+                
+                <img class="imgInicio" src="assets/snake-img.svg" alt="">
+
+                <h2>
+                    Utilize as setas do teclado para controlar a cobra.
+                </h2>
+
+                <ul>
+
+                    <li>
+                        <h3>
+                    Percorra a arena em busca de alimento.
+                </h3>
+                    </li>
+
+                    <li>
+                        <h3>
+                    Ao ingerir o alimento, a cobra aumenta seu tamanho e ganha mais velocidade.
+                </h3>
+                    </li>
+
+                    <li>
+                        <h3>
+                    O jogo termina caso ocorra uma colisão com as bordas da arena ou com o próprio corpo.
+                </h3>
+                    </li>
+                    
+                </ul>
+
+                
+
+                <button class="btnComecar" id="btnComecar">
+                    INICIAR
+                </button>
+
+            </section>
+
+            <section class="boxDialgoFimDeJogo" id="boxDialgoFim">
+
+                <h1 class="tituloJogo">
+                    Fim de Jogo!
+                </h1>
+                
+                <img class="imgFim" src="assets/colisao-img.svg" alt="">
+
+                <h2>
+                    Sua pontuação: <span id="pontuacaoFinal"> 0 </span>
+                </h2>
+
+                
+
+                
+
+                <button class="btnJogarNovamente" id="btnJogarNovamente">
+                    JOGAR NOVAMENTE
+                </button>
+
+
+            </section>
+        </section>
+
+        <script src="game.js"></script> 
+    
+    </body>
+</html>

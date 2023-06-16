@@ -1,0 +1,215 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Monomaniac One', sans-serif;
+    
+}
+:root{
+    --body-bg-color: #6C6C6C;
+    --main-shadow-color: rgba(0, 0, 0, 0.25);
+    --btn-bg: #1EC12E;
+    --btn-bg-hover: #77f484;
+    --arena-bg: #c1c1c1;
+    --border-radius: 8px;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--body-bg-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+main{
+    width:fit-content;
+    height: fit-content;
+    background-color: #FFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    margin: 16px auto;
+    border-radius: 12px;
+    box-shadow: 0px 4px 4px var(--main-shadow-color);
+}
+
+.arena {
+    
+    margin: 16px;
+    
+}
+.header{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    
+}
+
+.header .currentScoreText, .maximumScoreText{
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    font-size: 32px;
+    margin: 8px;
+    padding: 8px;
+    align-items: center;
+    
+}
+
+.header span{
+    width: max-content;
+    font-size: 48px;
+    
+}
+
+.arenaSection{
+    
+    width: fit-content;
+    height: fit-content;
+    background-color: var(--arena-bg);
+    border-radius: var(--border-radius);
+    margin: 16px;
+    display: flex;
+    box-shadow: inset 0px 12px 12px var(--main-shadow-color);
+}
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    opacity: 1;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.overlayShow {
+    opacity: 1;
+    transition: all 300ms ease;
+}
+
+.overlayHide {
+    opacity: 0;
+    transition: all 300ms ease;
+}
+
+.boxDialogoInicio{
+
+    position: absolute;
+    width:fit-content;
+    height: fit-content;
+    background-color: #FFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    padding: 32px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 4px var(--main-shadow-color);
+    opacity: 1;
+
+}
+
+.boxDialogoInicioShow {
+    opacity: 1;
+    transition: all 300ms ease;
+    pointer-events: all;
+}
+
+.boxDialogoInicioHide {
+    opacity: 0;
+    transition: all 300ms ease;
+    pointer-events: none;
+}
+
+.boxDialgoFimDeJogo{
+
+    position: absolute;
+    width:fit-content;
+    height: fit-content;
+    background-color: #FFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    padding: 56px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 4px var(--main-shadow-color);
+    opacity: 0;
+    pointer-events: none;
+
+}
+
+.boxDialgoFimDeJogoShow{
+    opacity: 1;
+    transition: all 300ms ease;
+    pointer-events: all;
+}
+
+.boxDialgoFimDeJogoHide{
+    opacity: 0;
+    transition: all 300ms ease;
+    pointer-events: none;
+}
+
+p {
+    margin: 16px;
+    font-size: 56px;
+
+}
+
+h1 {
+    padding: 16px;
+    font-size: 48px;
+
+}
+
+h2 {
+    padding: 16px;
+    font-size: 36px;
+
+}
+
+button {
+    
+    font-size: 32px;
+    width: fit-content;
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    font-size: 32px;
+    margin-top: 32px;
+    padding: 8px 32px;
+    border: none;
+    align-items: center;
+    background-color: var(--btn-bg);
+    border-radius: var(--border-radius);
+    box-shadow: 0px 4px 4px var(--main-shadow-color);
+
+}
+
+button:hover{
+    background-color: var(--btn-bg-hover);
+    cursor: pointer;
+    
+}
+
+.imgInicio{
+    width: auto;
+    height: 48px;
+}
+
+.imgFim{
+    width: auto;
+    height: 96px;
+}
