@@ -34,6 +34,12 @@ const overlayModal = document.getElementById("overlayModal");
 const dialogoInicio = document.getElementById("boxDialogoInicio");
 const dialogoFim = document.getElementById("boxDialgoFim");
 
+// desenha a arena do jogo
+context.fillStyle = "#c1c1c100";
+arena.style.border = '1px solid black';
+context.fillRect(0, 0, arena.width, arena.height);
+context.clearRect(0, 0, arena.width, arena.height);
+
 // adiciona o evento de detecção de tecla pressionada
 document.addEventListener("keydown", mudaDirecao);
 
@@ -77,7 +83,7 @@ function desenhaComida() {
 
   var comidaImg = new Image();
   comidaImg.src = "assets/comida.svg";
-  context.drawImage(comidaImg, comidaX, comidaY, 30, 30);
+  context.drawImage(comidaImg, comidaX - 5, comidaY -2, 35 , 35);
 
 }
 
@@ -87,7 +93,7 @@ function atualizaArena() {
 
     setTimeout(() => {
 
-      // desenha a arena do jogo
+      // atualiza a arena do jogo
       context.fillStyle = "#c1c1c100";
       arena.style.border = '1px solid black';
       context.fillRect(0, 0, arena.width, arena.height);
